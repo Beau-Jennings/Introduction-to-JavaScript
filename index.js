@@ -17,8 +17,10 @@ Do the following:
 
    HINT: no function required
 */
-
-
+const votingAge='18';
+if (votingAge>=18){
+  console.log=true;
+}
 
 /*
 Task 1b - Values
@@ -30,8 +32,9 @@ Do the following:
 
    HINT: no function required
 */
-
-
+let valueOne='7';
+let valueTwo='10';
+valueOne+valueTwo
 
 
 
@@ -46,6 +49,8 @@ Do the following:
    HINT: look up the Number method
 */
 
+let number= '1999';
+Math.ceil(number);
 
 
 
@@ -74,11 +79,9 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+  return age * 7;
 }
-
-
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
