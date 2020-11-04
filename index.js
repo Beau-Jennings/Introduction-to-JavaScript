@@ -111,21 +111,27 @@ Use the hungryDog function and feeding requirements below to do the following:
 */  
 
 function hungryDog(weight, age){
-  if(age <= 1 && weight <= 5){
-    return weight * .05;
-  } else if(age >= 1 && weight >= 6 && weight >= 10){
-    return weight * .04;
-  } else if(age >= 1 && weight >= 11 && weight >= 15){
-    return weight * .03;
-  } else if(age >= 1 && weight < 15){
-    return weight * .02;
-  } else if(age <=1 && age >= .16 && age <= .33){
-    return weight * .1;
-  } else if(age <=1 && age >= .33 && age <= .583){
-    return weight * .05;
-  } else if(age <=1 && age >= .583){
-    return weight * .04;
-}
+  if(age >= 1 && weight < 5){
+    return weight * .05
+  }
+  if (age >= 1 && weight >= 6 && weight <=10){
+    return weight *.04
+  }
+  if (age >= 1 && weight >= 11 && weight <=15){
+    return weight *.03
+  }
+  if (age >= 1 && weight > 15){
+    return weight *.02
+  }
+  if (age <0.34){
+    return weight *.1;
+  }
+  if (age >=0.34 && age <0.67){
+    return weight *0.05
+  }
+  if (age >=.67 && age <1){
+    return weight *0.04
+  }
 }
 
 
@@ -156,8 +162,7 @@ if (computer<.33){
   computer='rock';
 }else if (computer<.66){
   computer='scissors';
-}
-if (computer==='scissors' && user==='rock'|| computer==='paper' && user==='scissors' ||
+}if (computer==='scissors' && user==='rock'|| computer==='paper' && user==='scissors' ||
  computer === 'rock' &&  user==='paper'){
 return "you win!";
 }
@@ -184,9 +189,9 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
-  }
+function miles(km){
+  return km*.621371;
+}
 
 
 
@@ -198,10 +203,9 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
-  }
- 
+function feet(cm){
+return cm/30.48;
+} 
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -216,7 +220,7 @@ Using the annoyingSong function below do the following:
 
 
 function annoyingSong(number){
-  let str = (number+"bottles of soda on the wall"+number+"bottles of soda, take one down pass it around"+(number-1)+"bottles of soda on the wall");
+  let str = (number + " bottles of soda on the wall, " + number + " bottles of soda, take one down pass it around " + (number-1) + " bottles of soda on the wall");
 return str
 
 }
@@ -236,20 +240,20 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(Score){
-  if (Score>= 90){
+function grade(gradeScore){
+  if (gradeScore>=90){
   return "you got a A";
 }
- else if (Score>= 80){
+ else if (gradeScore>=80 && gradeScore <=89){
   return "you got a B";
 }
- else if (Score>= 70){
+ else if (gradeScore>=70 && gradeScore <=79){
   return "you got a C";
 }
- else if (Score>= 60){
+ else if (gradeScore>=60 && gradeScore <=69){
  return"you got a D";
 }
- else if (Score> 59){
+ else if (gradeScore<60){
   return "you got a F";
 }
 }
